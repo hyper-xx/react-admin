@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 
 import logo from './logo.png'
 import './frame.less'
-const { SubMenu } = Menu
+
 const { Header,Content, Sider } = Layout
 var breadcrumbItems = ''
 

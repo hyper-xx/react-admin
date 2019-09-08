@@ -4,7 +4,7 @@ import { message } from 'antd'
 const isDev=process.env.NODE_ENV==='development'
 
 const service = axios.create({
-    baseURL: isDev ? 'http://rap2api.taobao.org/app/mock/229849':''
+    baseURL: isDev ? 'http://rap2api.taobao.org/app/mock/230509' : ''
 })
 
 service.interceptors.request.use((config)=>{
@@ -21,7 +21,7 @@ service.interceptors.response.use((resp)=>{
         return resp.data
     }else{
         //error
-        message.error('错误')
+        message.error(resp.data.errMsg)
     }
 })
 
